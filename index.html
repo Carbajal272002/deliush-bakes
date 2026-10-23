@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliush Bakes | Repostería Fina y Pan Artesanal</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome para iconos de redes sociales y navegación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuración del tema y colores personalizados de Deliush Bakes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deliush-cream': '#FAF6F0',
+                        'deliush-pink': '#F4E0E1',
+                        'deliush-rose': '#E8A5A5',
+                        'deliush-accent': '#C87D75',
+                        'deliush-brown': '#4A3525',
+                        'deliush-mint': '#CDEAD9',
+                        'deliush-purple': '#E8D3F3'
+                    },
+                    fontFamily: {
+                        'sans': ['Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-deliush-cream text-deliush-brown font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAV BAR / ENCABEZADO -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo oficial -->
+            <a href="#" class="flex items-center space-x-3">
+                <img src="logo.jpg" alt="Deliush Bakes Logo" class="h-14 w-14 rounded-full object-cover border border-deliush-pink shadow-sm">
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-extrabold text-deliush-accent tracking-wide">Deliush Bakes</span>
+                    <span class="text-[10px] sm:text-xs text-deliush-brown/70 font-medium tracking-wider uppercase">Repostería Fina & Pan Artesanal</span>
+                </div>
+            </a>
+            
+            <!-- Menú Navegación Escritorio -->
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-deliush-brown">
+                <a href="#inicio" class="hover:text-deliush-rose transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-deliush-rose transition">Sobre Mí</a>
+                <a href="#galeria" class="hover:text-deliush-rose transition">Galería e Ideas</a>
+                <a href="#contacto" class="hover:text-deliush-rose transition">Contacto</a>
+                <a href="#faq" class="hover:text-deliush-rose transition">Preguntas Frecuentes</a>
+            </nav>
+
+            <!-- Iconos Redes Sociales -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="https://www.instagram.com/deliushbakes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-deliush-accent hover:text-deliush-rose text-2xl transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/524421794529" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-deliush-accent hover:text-deliush-rose text-2xl transition">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-deliush-brown focus:outline-none" aria-label="Abrir Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-deliush-pink px-4 pt-2 pb-4 space-y-3">
+            <a href="#inicio" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Inicio</a>
+            <a href="#sobre-mi" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Sobre Mí</a>
+            <a href="#galeria" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Galería e Ideas</a>
+            <a href="#contacto" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Contacto</a>
+            <a href="#faq" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Preguntas Frecuentes</a>
+            <div class="flex space-x-4 pt-2 border-t border-gray-100">
+                <a href="https://www.instagram.com/deliushbakes/" target="_blank" rel="noopener noreferrer" class="text-deliush-accent hover:text-deliush-rose text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/524421794529" target="_blank" rel="noopener noreferrer" class="text-deliush-accent hover:text-deliush-rose text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- 1. SECCIÓN HERO -->
+        <section id="inicio" class="relative bg-gradient-to-b from-deliush-purple/30 via-deliush-pink/30 to-deliush-cream py-16 lg:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Texto Principal -->
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-block bg-deliush-pink text-deliush-accent font-semibold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full shadow-sm">
+                            Repostería Fina y Pan Artesanal
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-deliush-brown leading-tight">
+                            Creaciones dulces hechas con pasión e imaginación
+                        </h1>
+                        <p class="text-lg text-deliush-brown/80 max-w-xl mx-auto lg:mx-0">
+                            En <strong>Deliush Bakes</strong> convertimos tus celebraciones en piezas de arte comestibles con sabor artesanal inolvidable.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                            <a href="#contacto" class="w-full sm:w-auto bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-3.5 px-8 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-center">
+                                Solicitar Presupuesto
+                            </a>
+                            <a href="https://www.instagram.com/deliushbakes/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-white border border-deliush-accent text-deliush-accent hover:bg-deliush-pink/30 font-bold py-3.5 px-6 rounded-full shadow-md transition text-center flex items-center justify-center space-x-2">
+                                <i class="fab fa-instagram text-xl"></i>
+                                <span>Síguenos en Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Galería Collage en Hero -->
+                    <div class="grid grid-cols-2 gap-4 relative">
+                        <div class="space-y-4">
+                            <img src="pastel-redvelvet.jpeg" alt="Pastel Naked Red Velvet" class="rounded-2xl shadow-md object-cover w-full h-64 transform hover:scale-105 transition duration-300">
+                            <img src="pastel-rosa.jpeg" alt="Pastel elegante con rosas" class="rounded-2xl shadow-md object-cover w-full h-48 transform hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="pastel-chanel.jpeg" alt="Pastel Chanel" class="rounded-2xl shadow-md object-cover w-full h-48 transform hover:scale-105 transition duration-300">
+                            <img src="pastel-elsa.jpeg" alt="Pastel temática Elsa" class="rounded-2xl shadow-md object-cover w-full h-64 transform hover:scale-105 transition duration-300">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN SOBRE MÍ -->
+        <section id="sobre-mi" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative flex justify-center">
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-deliush-mint rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                        <!-- Imagen Banner / Logo grande -->
+                        <img src="banner-logo.jpeg" alt="Deliush Bakes Repostería Fina" class="relative rounded-3xl shadow-xl w-full max-w-md h-auto object-contain bg-deliush-purple/20 p-2">
+                    </div>
+                    <div class="space-y-6">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown">
+                            Detrás de cada detalle hay una historia y mucho amor
+                        </h2>
+                        <div class="w-16 h-1 bg-deliush-accent rounded"></div>
+                        <p class="text-deliush-brown/80 leading-relaxed text-lg">
+                            ¡Hola! Soy la mente y el corazón detrás de <strong>Deliush Bakes</strong>. Mi pasión por la repostería fina y el pan artesanal nació del deseo de convertir momentos especiales en experiencias memorables para el paladar y la vista.
+                        </p>
+                        <p class="text-deliush-brown/80 leading-relaxed">
+                            No elaboramos pasteles genéricos; diseñamos piezas exclusivas que reflejan el estilo de cada celebración. Desde galletas temáticas elaboradas minuciosamente hasta pasteles decorados con flores naturales o temáticas corporativas, cada ingrediente se selecciona para asegurar la máxima frescura y calidad.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="border-l-4 border-deliush-accent pl-4">
+                                <h3 class="font-bold text-xl text-deliush-brown">100% Personalizado</h3>
+                                <p class="text-sm text-deliush-brown/70">Adaptado al tema y tamaño de tu evento.</p>
+                            </div>
+                            <div class="border-l-4 border-deliush-accent pl-4">
+                                <h3 class="font-bold text-xl text-deliush-brown">Sabor Fino & Artesanal</h3>
+                                <p class="text-sm text-deliush-brown/70">Recetas cuidadas con toque gourmet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN GALERÍA DE IDEAS -->
+        <section id="galeria" class="py-16 bg-deliush-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mb-4">Galería de Ideas & Celebraciones</h2>
+                    <p class="text-deliush-brown/80">Explora algunos de nuestros trabajos y encuentra la inspiración perfecta para tu próximo pedido.</p>
+                </div>
+
+                <!-- Tarjetas de Galería -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Tarjeta 1: Frutos Rojos -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="pastel-redvelvet.jpeg" alt="Pastel con Frutos Rojos" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Cumpleaños & Aniversarios</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel Naked de Frutos Rojos</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Capas de bizcocho artesanal con crema suave, fresas, zarzamoras y toques dorados.</p>
+                            </div>
+                            <button onclick="prefillEvent('Cumpleaños Adulto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Temática Corporativa / Autos -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="pastel-ford.jpeg" alt="Pastel temático Ford y Tesla" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Eventos Especiales & Logros</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pasteles de Marcas & Aficiones</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Diseños estructurados de dos niveles personalizados con logos e impresiones comestibles.</p>
+                            </div>
+                            <button onclick="prefillEvent('Fiesta Temática')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Toy Story -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="pastel-toystory.jpeg" alt="Pastel temático Toy Story" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Cumpleaños Infantiles</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Tartas Temáticas & Fantasía</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Modelados detallados de sus personajes favoritos para alegrar a los más pequeños.</p>
+                            </div>
+                            <button onclick="prefillEvent('Cumpleaños Infantil')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Flores Elegantes -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="pastel-rosa.jpeg" alt="Pastel elegante de flores" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Bodas & XV Años</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Diseños Florales & Románticos</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Pasteles de varios niveles con acabado aterciopelado, perlas y arreglos florales frescos.</p>
+                            </div>
+                            <button onclick="prefillEvent('Boda / Aniversario')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5: Galletas Decoradas -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="galletas.jpeg" alt="Galletas artísticas decoradas a mano" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Mesa de Dulces</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Galletas Decoradas a Mano</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Detalles artísticos pintados con glacé real, ideales para mesas de postres o recuerditos.</p>
+                            </div>
+                            <button onclick="prefillEvent('Mesa de Dulces / Galletas')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6: Superhéroes Dúo -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="pastel-superheroes.jpeg" alt="Pastel de Wolverine y Spiderman" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Diseños Creativos</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pasteles Divididos Dúo</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Combina dos de tus personajes o conceptos favoritos en un solo pastel sorprendente.</p>
+                            </div>
+                            <button onclick="prefillEvent('Fiesta Temática')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FORMULARIO DE CAPTACIÓN -->
+        <section id="contacto" class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-deliush-cream rounded-3xl p-8 sm:p-12 shadow-xl border border-deliush-pink">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-deliush-brown">Solicita tu Presupuesto Personalizado</h2>
+                        <p class="text-deliush-brown/80 mt-2">Déjanos tus datos y te ayudaremos a diseñar el pastel o postre ideal.</p>
+                    </div>
+
+                    <!-- Mensaje de éxito -->
+                    <div id="form-success" class="hidden bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded-xl mb-6 text-center font-medium">
+                        ¡Datos guardados correctamente! Haz clic en el botón flotante "Cotiza ahora" para enviar tu mensaje por WhatsApp.
+                    </div>
+
+                    <form id="lead-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nombre" class="block text-sm font-semibold text-deliush-brown mb-2">Nombre completo *</label>
+                                <input type="text" id="nombre" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-deliush-brown mb-2">Correo electrónico *</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition" placeholder="tu@email.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="telefono" class="block text-sm font-semibold text-deliush-brown mb-2">Teléfono / WhatsApp *</label>
+                                <input type="tel" id="telefono" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition" placeholder="Ej. 4421794529">
+                            </div>
+                            <div>
+                                <label for="evento" class="block text-sm font-semibold text-deliush-brown mb-2">Tipo de evento</label>
+                                <select id="evento" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition bg-white">
+                                    <option value="Cumpleaños Infantil">Cumpleaños Infantil</option>
+                                    <option value="Cumpleaños Adulto">Cumpleaños Adulto</option>
+                                    <option value="Boda / Aniversario">Boda / Aniversario</option>
+                                    <option value="Fiesta Temática">Fiesta Temática</option>
+                                    <option value="Mesa de Dulces / Galletas">Mesa de Dulces / Galletas</option>
+                                    <option value="Otro Evento">Otro Evento</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="block text-sm font-semibold text-deliush-brown mb-2">Detalles del pedido (personas, sabor de preferencia, fecha del evento)</label>
+                            <textarea id="mensaje" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition" placeholder="Necesito un pastel para 25 personas el día..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition">
+                            Guardar Registro y Preparar Cotización
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PREGUNTAS FRECUENTES (FAQ) -->
+        <section id="faq" class="py-16 bg-deliush-cream">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-deliush-brown">Preguntas Frecuentes</h2>
+                    <p class="text-deliush-brown/80 mt-2">Todo lo que necesitas saber antes de encargar tu pedido</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                        <h3 class="text-lg font-bold text-deliush-brown flex items-center">
+                            <i class="fas fa-clock text-deliush-accent mr-3"></i>
+                            ¿Con cuánta anticipación debo hacer mi pedido?
+                        </h3>
+                        <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
+                            Recomendamos agendar tu pedido con <strong>1 a 2 semanas de anticipación</strong>. Para fechas festivas o eventos grandes, sugerimos apartar tu lugar con 3 semanas de margen.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                        <h3 class="text-lg font-bold text-deliush-brown flex items-center">
+                            <i class="fas fa-truck text-deliush-accent mr-3"></i>
+                            ¿Entregan a domicilio?
+                        </h3>
+                        <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
+                            Ofrecemos servicio de entrega a domicilio con un costo adicional dependiendo de la zona de entrega, asegurando que tu pastel llegue seguro y en óptimas condiciones.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                        <h3 class="text-lg font-bold text-deliush-brown flex items-center">
+                            <i class="fas fa-paint-brush text-deliush-accent mr-3"></i>
+                            ¿Cómo confirmo mi pedido personalizado?
+                        </h3>
+                        <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
+                            Una vez acordado el diseño, porciones y fecha a través de WhatsApp, solicitamos un anticipo del 50% para reservar tu lugar en agenda y comenzar la elaboración.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-deliush-brown text-deliush-cream py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <img src="logo.jpg" alt="Deliush Bakes Logo" class="h-16 w-16 rounded-full mx-auto object-cover border-2 border-deliush-pink">
+            <h3 class="text-2xl font-bold text-deliush-pink">Deliush Bakes</h3>
+            <p class="text-sm text-deliush-pink/80">Repostería Fina y Pan Artesanal</p>
+            <div class="flex justify-center space-x-6 text-xl">
+                <a href="https://www.instagram.com/deliushbakes/" target="_blank" rel="noopener noreferrer" class="hover:text-deliush-rose transition" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/524421794529" target="_blank" rel="noopener noreferrer" class="hover:text-deliush-rose transition" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p class="text-xs text-deliush-pink/60 pt-4">&copy; 2026 Deliush Bakes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE "COTIZA AHORA" -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="floating-quote-btn" onclick="openWhatsApp()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-6 rounded-full shadow-2xl flex items-center space-x-3 transition transform hover:scale-105 active:scale-95">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="text-base">Cotiza ahora</span>
+        </button>
+    </div>
+
+    <!-- SCRIPTS JS -->
+    <script>
+        // Manejo del menú desplegable móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Autocompletado de tipo de evento desde tarjetas
+        function prefillEvent(eventType) {
+            const selectEvent = document.getElementById('evento');
+            if (selectEvent) {
+                selectEvent.value = eventType;
+            }
+            const contactoSection = document.getElementById('contacto');
+            if (contactoSection) {
+                contactoSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Manejo del formulario de captación y almacenamiento en localStorage
+        const leadForm = document.getElementById('lead-form');
+        const formSuccess = document.getElementById('form-success');
+
+        leadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const leadData = {
+                nombre: document.getElementById('nombre').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                telefono: document.getElementById('telefono').value.trim(),
+                evento: document.getElementById('evento').value,
+                mensaje: document.getElementById('mensaje').value.trim(),
+                fechaRegistro: new Date().toISOString()
+            };
+
+            // Guardar en localStorage
+            let leads = JSON.parse(localStorage.getItem('deliush_leads') || '[]');
+            leads.push(leadData);
+            localStorage.setItem('deliush_leads', JSON.stringify(leads));
+
+            // Notificación visual de guardado
+            formSuccess.classList.remove('hidden');
+            leadForm.reset();
+
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Redirección a WhatsApp
+        function openWhatsApp() {
+            const phoneNumber = "524421794529";
+            let leads = JSON.parse(localStorage.getItem('deliush_leads') || '[]');
+            let message = "¡Hola Deliush Bakes! Me gustaría cotizar un pastel personalizado.";
+
+            if (leads.length > 0) {
+                const lastLead = leads[leads.length - 1];
+                message = `¡Hola Deliush Bakes! Mi nombre es ${lastLead.nombre}. Me gustaría pedir presupuesto para un evento de tipo: ${lastLead.evento}. ${lastLead.mensaje ? 'Detalles: ' + lastLead.mensaje : ''}`;
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>
