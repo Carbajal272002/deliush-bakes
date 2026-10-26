@@ -8,10 +8,10 @@
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FontAwesome para iconos de redes sociales y navegación -->
+    <!-- FontAwesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Configuración del tema y colores personalizados de Deliush Bakes -->
+    <!-- Configuración del tema y colores personalizados -->
     <script>
         tailwind.config = {
             theme: {
@@ -48,12 +48,13 @@
             </a>
             
             <!-- Menú Navegación Escritorio -->
-            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-deliush-brown">
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-deliush-brown">
                 <a href="#inicio" class="hover:text-deliush-rose transition">Inicio</a>
                 <a href="#sobre-mi" class="hover:text-deliush-rose transition">Sobre Mí</a>
+                <a href="#celebraciones" class="hover:text-deliush-rose transition">Celebraciones</a>
                 <a href="#galeria" class="hover:text-deliush-rose transition">Galería e Ideas</a>
                 <a href="#contacto" class="hover:text-deliush-rose transition">Contacto</a>
-                <a href="#faq" class="hover:text-deliush-rose transition">Preguntas Frecuentes</a>
+                <a href="#faq" class="hover:text-deliush-rose transition">FAQ</a>
             </nav>
 
             <!-- Iconos Redes Sociales -->
@@ -76,17 +77,10 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-deliush-pink px-4 pt-2 pb-4 space-y-3">
             <a href="#inicio" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Inicio</a>
             <a href="#sobre-mi" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Sobre Mí</a>
+            <a href="#celebraciones" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Celebraciones</a>
             <a href="#galeria" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Galería e Ideas</a>
             <a href="#contacto" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Contacto</a>
             <a href="#faq" class="block text-deliush-brown hover:text-deliush-accent font-medium transition">Preguntas Frecuentes</a>
-            <div class="flex space-x-4 pt-2 border-t border-gray-100">
-                <a href="https://www.instagram.com/deliushbakes/" target="_blank" rel="noopener noreferrer" class="text-deliush-accent hover:text-deliush-rose text-2xl">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/524421794529" target="_blank" rel="noopener noreferrer" class="text-deliush-accent hover:text-deliush-rose text-2xl">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
         </div>
     </header>
 
@@ -105,7 +99,7 @@
                             Creaciones dulces hechas con pasión e imaginación
                         </h1>
                         <p class="text-lg text-deliush-brown/80 max-w-xl mx-auto lg:mx-0">
-                            En <strong>Deliush Bakes</strong> convertimos tus celebraciones en piezas de arte comestibles con sabor artesanal inolvidable.
+                            En <strong>Deliush Bakes</strong> convertimos cada celebración en una experiencia inolvidable con sabor artesanal único.
                         </p>
                         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
                             <a href="#contacto" class="w-full sm:w-auto bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-3.5 px-8 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-center">
@@ -121,12 +115,12 @@
                     <!-- Galería Collage en Hero -->
                     <div class="grid grid-cols-2 gap-4 relative">
                         <div class="space-y-4">
-                            <img src="pastel-redvelvet.jpeg" alt="Pastel Naked Red Velvet" class="rounded-2xl shadow-md object-cover w-full h-64 transform hover:scale-105 transition duration-300">
+                            <img src="pastel-cumpleanos.jpeg" alt="Pastel Cumpleaños Divertido" class="rounded-2xl shadow-md object-cover w-full h-64 transform hover:scale-105 transition duration-300">
                             <img src="pastel-rosa.jpeg" alt="Pastel elegante con rosas" class="rounded-2xl shadow-md object-cover w-full h-48 transform hover:scale-105 transition duration-300">
                         </div>
                         <div class="space-y-4 pt-8">
                             <img src="pastel-chanel.jpeg" alt="Pastel Chanel" class="rounded-2xl shadow-md object-cover w-full h-48 transform hover:scale-105 transition duration-300">
-                            <img src="pastel-elsa.jpeg" alt="Pastel temática Elsa" class="rounded-2xl shadow-md object-cover w-full h-64 transform hover:scale-105 transition duration-300">
+                            <img src="pastel-winnie.jpeg" alt="Pastel Winnie Pooh" class="rounded-2xl shadow-md object-cover w-full h-64 transform hover:scale-105 transition duration-300">
                         </div>
                     </div>
 
@@ -140,7 +134,6 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="relative flex justify-center">
                         <div class="absolute -top-4 -left-4 w-72 h-72 bg-deliush-mint rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
-                        <!-- Imagen Banner / Logo grande -->
                         <img src="banner-logo.jpeg" alt="Deliush Bakes Repostería Fina" class="relative rounded-3xl shadow-xl w-full max-w-md h-auto object-contain bg-deliush-purple/20 p-2">
                     </div>
                     <div class="space-y-6">
@@ -152,7 +145,7 @@
                             ¡Hola! Soy la mente y el corazón detrás de <strong>Deliush Bakes</strong>. Mi pasión por la repostería fina y el pan artesanal nació del deseo de convertir momentos especiales en experiencias memorables para el paladar y la vista.
                         </p>
                         <p class="text-deliush-brown/80 leading-relaxed">
-                            No elaboramos pasteles genéricos; diseñamos piezas exclusivas que reflejan el estilo de cada celebración. Desde galletas temáticas elaboradas minuciosamente hasta pasteles decorados con flores naturales o temáticas corporativas, cada ingrediente se selecciona para asegurar la máxima frescura y calidad.
+                            Diseñamos piezas exclusivas que reflejan la esencia de cada celebración. Cuidamos cada ingrediente para asegurar la máxima frescura y calidad en cada proyecto.
                         </p>
                         <div class="grid grid-cols-2 gap-4 pt-4">
                             <div class="border-l-4 border-deliush-accent pl-4">
@@ -169,103 +162,154 @@
             </div>
         </section>
 
-        <!-- 3. SECCIÓN GALERÍA DE IDEAS -->
-        <section id="galeria" class="py-16 bg-deliush-cream">
+        <!-- 3. SECCIÓN: CELEBRACIONES -->
+        <section id="celebraciones" class="py-16 bg-deliush-cream">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mb-4">Galería de Ideas & Celebraciones</h2>
-                    <p class="text-deliush-brown/80">Explora algunos de nuestros trabajos y encuentra la inspiración perfecta para tu próximo pedido.</p>
+                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/60 px-3 py-1 rounded-full">Momentos Especiales</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mt-2 mb-4">Celebraciones para Cada Ocasión</h2>
+                    <p class="text-deliush-brown/80">Tenemos el diseño ideal para acompañarte en tus fechas más importantes del año.</p>
                 </div>
 
-                <!-- Tarjetas de Galería -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cuadrícula de Celebraciones (10 categorías solicitadas) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Tarjeta 1: Frutos Rojos -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
-                        <img src="pastel-redvelvet.jpeg" alt="Pastel con Frutos Rojos" class="h-64 w-full object-cover">
+                    <!-- 1. Cumpleaños -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-cumpleanos.jpeg" alt="Cumpleaños" class="h-56 w-full object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Cumpleaños & Aniversarios</span>
-                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel Naked de Frutos Rojos</h3>
-                                <p class="text-deliush-brown/70 text-sm mt-2">Capas de bizcocho artesanal con crema suave, fresas, zarzamoras y toques dorados.</p>
+                                <h3 class="text-xl font-bold text-deliush-brown">Cumpleaños</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Temáticas divertidas, estilos personalizados y pasteles únicos para festejar tu día.</p>
                             </div>
-                            <button onclick="prefillEvent('Cumpleaños Adulto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
-                                Cotizar esta idea &rarr;
+                            <button onclick="prefillEvent('Cumpleaños')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Cumpleaños →
                             </button>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2: Temática Corporativa / Autos -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
-                        <img src="pastel-ford.jpeg" alt="Pastel temático Ford y Tesla" class="h-64 w-full object-cover">
+                    <!-- 2. XV Años -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-xvanos.jpeg" alt="XV Años" class="h-56 w-full object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Eventos Especiales & Logros</span>
-                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pasteles de Marcas & Aficiones</h3>
-                                <p class="text-deliush-brown/70 text-sm mt-2">Diseños estructurados de dos niveles personalizados con logos e impresiones comestibles.</p>
+                                <h3 class="text-xl font-bold text-deliush-brown">XV Años</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Elegancia, niveles imponentes, acabados finos y detalles florales únicos para tu gran noche.</p>
                             </div>
-                            <button onclick="prefillEvent('Fiesta Temática')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
-                                Cotizar esta idea &rarr;
+                            <button onclick="prefillEvent('XV Años')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar XV Años →
                             </button>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 3: Toy Story -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
-                        <img src="pastel-toystory.jpeg" alt="Pastel temático Toy Story" class="h-64 w-full object-cover">
+                    <!-- 3. Baby Showers -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="baby-shower.jpeg" alt="Baby Showers" class="h-56 w-full object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Cumpleaños Infantiles</span>
-                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Tartas Temáticas & Fantasía</h3>
-                                <p class="text-deliush-brown/70 text-sm mt-2">Modelados detallados de sus personajes favoritos para alegrar a los más pequeños.</p>
+                                <h3 class="text-xl font-bold text-deliush-brown">Baby Showers</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Diseños tiernos, zapatitos de fondant, colores pastel y detalles para dar la bienvenida al bebé.</p>
                             </div>
-                            <button onclick="prefillEvent('Cumpleaños Infantil')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
-                                Cotizar esta idea &rarr;
+                            <button onclick="prefillEvent('Baby Shower')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Baby Shower →
                             </button>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 4: Flores Elegantes -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
-                        <img src="pastel-rosa.jpeg" alt="Pastel elegante de flores" class="h-64 w-full object-cover">
+                    <!-- 4. Halloween -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="galletas halloween.jpeg" alt="Halloween" class="h-56 w-full object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Bodas & XV Años</span>
-                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Diseños Florales & Románticos</h3>
-                                <p class="text-deliush-brown/70 text-sm mt-2">Pasteles de varios niveles con acabado aterciopelado, perlas y arreglos florales frescos.</p>
+                                <h3 class="text-xl font-bold text-deliush-brown">Halloween</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Galletas temáticas artísticas y postres terroríficamente deliciosos para tus fiestas de disfraces.</p>
                             </div>
-                            <button onclick="prefillEvent('Boda / Aniversario')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
-                                Cotizar esta idea &rarr;
+                            <button onclick="prefillEvent('Halloween')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Halloween →
                             </button>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 5: Galletas Decoradas -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
-                        <img src="galletas.jpeg" alt="Galletas artísticas decoradas a mano" class="h-64 w-full object-cover">
+                    <!-- 5. Navidad -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-redvelvet.jpeg" alt="Navidad" class="h-56 w-full object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Mesa de Dulces</span>
-                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Galletas Decoradas a Mano</h3>
-                                <p class="text-deliush-brown/70 text-sm mt-2">Detalles artísticos pintados con glacé real, ideales para mesas de postres o recuerditos.</p>
+                                <h3 class="text-xl font-bold text-deliush-brown">Navidad</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Postres ideales para cenas decembrinas, intercambios de regalos y reuniones familiares.</p>
                             </div>
-                            <button onclick="prefillEvent('Mesa de Dulces / Galletas')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
-                                Cotizar esta idea &rarr;
+                            <button onclick="prefillEvent('Navidad')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Navidad →
                             </button>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 6: Superhéroes Dúo -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
-                        <img src="pastel-superheroes.jpeg" alt="Pastel de Wolverine y Spiderman" class="h-64 w-full object-cover">
+                    <!-- 6. Día de las Madres -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-rosa.jpeg" alt="Día de las Madres" class="h-56 w-full object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Diseños Creativos</span>
-                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pasteles Divididos Dúo</h3>
-                                <p class="text-deliush-brown/70 text-sm mt-2">Combina dos de tus personajes o conceptos favoritos en un solo pastel sorprendente.</p>
+                                <h3 class="text-xl font-bold text-deliush-brown">Día de las Madres</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Arreglos florales en repostería fina, detalles delicados para consentir a mamá en su día.</p>
                             </div>
-                            <button onclick="prefillEvent('Fiesta Temática')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
-                                Cotizar esta idea &rarr;
+                            <button onclick="prefillEvent('Día de las Madres')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Día de las Madres →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 7. San Valentín -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-fresas.jpeg" alt="San Valentín" class="h-56 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-deliush-brown">San Valentín</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Detalles románticos con fresas, chocolates y dedicatorias especiales para el amor y la amistad.</p>
+                            </div>
+                            <button onclick="prefillEvent('San Valentín')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar San Valentín →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 8. Día de Muertos -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-ford.jpeg" alt="Día de Muertos" class="h-56 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-deliush-brown">Día de Muertos</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Diseños conmemorativos y tradicionales llenos de color y cultura mexicana.</p>
+                            </div>
+                            <button onclick="prefillEvent('Día de Muertos')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Día de Muertos →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 9. Día del Padre -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-basquetball.jpeg" alt="Día del Padre" class="h-56 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-deliush-brown">Día del Padre</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Temáticas de deportes, hobbies, autos y elementos favoritos para celebrar a papá.</p>
+                            </div>
+                            <button onclick="prefillEvent('Día del Padre')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Día del Padre →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 10. Graduaciones -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col sm:col-span-2 lg:col-span-3 max-w-md mx-auto w-full">
+                        <img src="pastel-superheroes.jpeg" alt="Graduaciones" class="h-56 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-deliush-brown">Graduaciones</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Festeja el éxito académico con un pastel personalizado acorde a su logro profesional o escolar.</p>
+                            </div>
+                            <button onclick="prefillEvent('Graduación')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar Graduación →
                             </button>
                         </div>
                     </div>
@@ -274,16 +318,120 @@
             </div>
         </section>
 
-        <!-- 4. FORMULARIO DE CAPTACIÓN -->
-        <section id="contacto" class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-deliush-cream rounded-3xl p-8 sm:p-12 shadow-xl border border-deliush-pink">
-                    <div class="text-center mb-8">
-                        <h2 class="text-3xl font-bold text-deliush-brown">Solicita tu Presupuesto Personalizado</h2>
-                        <p class="text-deliush-brown/80 mt-2">Déjanos tus datos y te ayudaremos a diseñar el pastel o postre ideal.</p>
+        <!-- 4. SECCIÓN GALERÍA DE IDEAS GENERAL -->
+        <section id="galeria" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mb-4">Galería de Ideas & Modelados</h2>
+                    <p class="text-deliush-brown/80">Inspírate con nuestra amplia variedad de estilos, personajes y repostería fina.</p>
+                </div>
+
+                <!-- Tarjetas de Galería con Variedad de Fotos -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Winnie Pooh -->
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-winnie.jpeg" alt="Winnie Pooh" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Infantil</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel Winnie Pooh Artesanal</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Detalles pintados a mano y texturas rústicas simulando un tronco de bosque con abejitas.</p>
+                            </div>
+                            <button onclick="prefillEvent('Cumpleaños')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea →
+                            </button>
+                        </div>
                     </div>
 
-                    <!-- Mensaje de éxito -->
+                    <!-- León de la Selva -->
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-leon.jpeg" alt="León" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Infantil / Safari</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel Temático León Safari</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Figura modelada en 3D con melena texturizada y hojas tropicales de fondant.</p>
+                            </div>
+                            <button onclick="prefillEvent('Cumpleaños')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Luis Aguilar (Homenaje / Temático) -->
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-luis-aguilar.jpeg" alt="Luis Aguilar" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Homenaje & Tradición</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel Mariachi & Colección</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Sombrero de charro modelado a detalle, notas musicales e impresiones fotográficas.</p>
+                            </div>
+                            <button onclick="prefillEvent('Fiesta Temática')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dinosaurios -->
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-dinosaurios.jpeg" alt="Dinosaurios" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Aventura Infantil</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel de Dinosaurios en 3D</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Figuras modeladas de dinosaurios festivos con temática de selva y vegetación.</p>
+                            </div>
+                            <button onclick="prefillEvent('Cumpleaños')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Rayo McQueen -->
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-rayo.jpeg" alt="Rayo McQueen" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Cars / Velocidad</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel Temático Rayo McQueen</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Pista de carreras, banderas a cuadros y personajes favoritos para los amantes de la velocidad.</p>
+                            </div>
+                            <button onclick="prefillEvent('Cumpleaños')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Osito Pastelero -->
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                        <img src="pastel-osito.jpeg" alt="Osito" class="h-64 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-deliush-accent uppercase tracking-wider">Tierno & Celebración</span>
+                                <h3 class="text-xl font-bold text-deliush-brown mt-1">Pastel con Osito de Cumpleaños</h3>
+                                <p class="text-deliush-brown/70 text-sm mt-2">Osito tierno modelado en la parte superior con detalles dorados y globos de chocolate.</p>
+                            </div>
+                            <button onclick="prefillEvent('Cumpleaños')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline text-left">
+                                Cotizar esta idea →
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FORMULARIO DE CAPTACIÓN -->
+        <section id="contacto" class="py-16 bg-deliush-cream">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-deliush-pink">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-deliush-brown">Solicita tu Presupuesto Personalizado</h2>
+                        <p class="text-deliush-brown/80 mt-2">Déjanos tus datos y te ayudaremos a diseñar el pastel ideal.</p>
+                    </div>
+
                     <div id="form-success" class="hidden bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded-xl mb-6 text-center font-medium">
                         ¡Datos guardados correctamente! Haz clic en el botón flotante "Cotiza ahora" para enviar tu mensaje por WhatsApp.
                     </div>
@@ -306,20 +454,25 @@
                                 <input type="tel" id="telefono" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition" placeholder="Ej. 4421794529">
                             </div>
                             <div>
-                                <label for="evento" class="block text-sm font-semibold text-deliush-brown mb-2">Tipo de evento</label>
+                                <label for="evento" class="block text-sm font-semibold text-deliush-brown mb-2">Tipo de celebración / evento</label>
                                 <select id="evento" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition bg-white">
-                                    <option value="Cumpleaños Infantil">Cumpleaños Infantil</option>
-                                    <option value="Cumpleaños Adulto">Cumpleaños Adulto</option>
-                                    <option value="Boda / Aniversario">Boda / Aniversario</option>
-                                    <option value="Fiesta Temática">Fiesta Temática</option>
-                                    <option value="Mesa de Dulces / Galletas">Mesa de Dulces / Galletas</option>
+                                    <option value="Cumpleaños">Cumpleaños</option>
+                                    <option value="XV Años">XV Años</option>
+                                    <option value="Baby Shower">Baby Shower</option>
+                                    <option value="Halloween">Halloween</option>
+                                    <option value="Navidad">Navidad</option>
+                                    <option value="Día de las Madres">Día de las Madres</option>
+                                    <option value="San Valentín">San Valentín</option>
+                                    <option value="Día de Muertos">Día de Muertos</option>
+                                    <option value="Día del Padre">Día del Padre</option>
+                                    <option value="Graduación">Graduación</option>
                                     <option value="Otro Evento">Otro Evento</option>
                                 </select>
                             </div>
                         </div>
 
                         <div>
-                            <label for="mensaje" class="block text-sm font-semibold text-deliush-brown mb-2">Detalles del pedido (personas, sabor de preferencia, fecha del evento)</label>
+                            <label for="mensaje" class="block text-sm font-semibold text-deliush-brown mb-2">Detalles del pedido (personas, sabor, fecha)</label>
                             <textarea id="mensaje" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent focus:border-transparent outline-none transition" placeholder="Necesito un pastel para 25 personas el día..."></textarea>
                         </div>
 
@@ -331,8 +484,8 @@
             </div>
         </section>
 
-        <!-- 5. PREGUNTAS FRECUENTES (FAQ) -->
-        <section id="faq" class="py-16 bg-deliush-cream">
+        <!-- 6. PREGUNTAS FRECUENTES (FAQ) -->
+        <section id="faq" class="py-16 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-deliush-brown">Preguntas Frecuentes</h2>
@@ -340,7 +493,7 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                    <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
                         <h3 class="text-lg font-bold text-deliush-brown flex items-center">
                             <i class="fas fa-clock text-deliush-accent mr-3"></i>
                             ¿Con cuánta anticipación debo hacer mi pedido?
@@ -350,23 +503,23 @@
                         </p>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                    <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
                         <h3 class="text-lg font-bold text-deliush-brown flex items-center">
                             <i class="fas fa-truck text-deliush-accent mr-3"></i>
                             ¿Entregan a domicilio?
                         </h3>
                         <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
-                            Ofrecemos servicio de entrega a domicilio con un costo adicional dependiendo de la zona de entrega, asegurando que tu pastel llegue seguro y en óptimas condiciones.
+                            Ofrecemos servicio de entrega a domicilio con un costo adicional dependiendo de la zona de entrega, asegurando que tu pedido llegue en óptimas condiciones.
                         </p>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                    <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
                         <h3 class="text-lg font-bold text-deliush-brown flex items-center">
                             <i class="fas fa-paint-brush text-deliush-accent mr-3"></i>
                             ¿Cómo confirmo mi pedido personalizado?
                         </h3>
                         <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
-                            Una vez acordado el diseño, porciones y fecha a través de WhatsApp, solicitamos un anticipo del 50% para reservar tu lugar en agenda y comenzar la elaboración.
+                            Una vez acordado el diseño, porciones y fecha a través de WhatsApp, solicitamos un anticipo del 50% para reservar tu lugar en agenda.
                         </p>
                     </div>
                 </div>
@@ -388,7 +541,7 @@
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
-            <p class="text-xs text-deliush-pink/60 pt-4">&copy; 2026 Deliush Bakes. Todos los derechos reservados.</p>
+            <p class="text-xs text-deliush-pink/60 pt-4">© 2026 Deliush Bakes. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -402,7 +555,6 @@
 
     <!-- SCRIPTS JS -->
     <script>
-        // Manejo del menú desplegable móvil
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -410,7 +562,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Autocompletado de tipo de evento desde tarjetas
         function prefillEvent(eventType) {
             const selectEvent = document.getElementById('evento');
             if (selectEvent) {
@@ -422,7 +573,6 @@
             }
         }
 
-        // Manejo del formulario de captación y almacenamiento en localStorage
         const leadForm = document.getElementById('lead-form');
         const formSuccess = document.getElementById('form-success');
 
@@ -438,12 +588,10 @@
                 fechaRegistro: new Date().toISOString()
             };
 
-            // Guardar en localStorage
             let leads = JSON.parse(localStorage.getItem('deliush_leads') || '[]');
             leads.push(leadData);
             localStorage.setItem('deliush_leads', JSON.stringify(leads));
 
-            // Notificación visual de guardado
             formSuccess.classList.remove('hidden');
             leadForm.reset();
 
@@ -452,7 +600,6 @@
             }, 5000);
         });
 
-        // Redirección a WhatsApp
         function openWhatsApp() {
             const phoneNumber = "524421794529";
             let leads = JSON.parse(localStorage.getItem('deliush_leads') || '[]');
