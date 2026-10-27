@@ -35,7 +35,7 @@
 </head>
 <body class="bg-deliush-cream text-deliush-brown font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- NAV BAR / ENCABEZADO -->
+    <!-- NAV BAR / ENCABEZADO REESTRUCTURADO -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo oficial -->
@@ -47,10 +47,13 @@
                 </div>
             </button>
             
-            <!-- Menú Navegación Escritorio (La página de inicio NO muestra el enlace "Índice" aquí, se accede desde el botón principal o llamadas a la acción) -->
+            <!-- Menú de Navegación Principal solicitado -->
             <nav id="desktop-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold text-deliush-brown">
                 <button onclick="cambiarVista('inicio')" class="hover:text-deliush-rose transition focus:outline-none">Inicio</button>
-                <button onclick="cambiarVista('indice')" class="bg-deliush-pink/60 text-deliush-accent px-4 py-2 rounded-full hover:bg-deliush-pink transition focus:outline-none font-bold">Índice General</button>
+                <button onclick="cambiarVista('sobre-mi')" class="hover:text-deliush-rose transition focus:outline-none">Sobre mí</button>
+                <button onclick="cambiarVista('ideas-modelos')" class="hover:text-deliush-rose transition focus:outline-none">Ideas y modelos</button>
+                <button onclick="cambiarVista('celebraciones')" class="hover:text-deliush-rose transition focus:outline-none font-bold text-deliush-accent">Celebraciones</button>
+                <button onclick="cambiarVista('galerias')" class="hover:text-deliush-rose transition focus:outline-none font-bold text-deliush-accent">Galerías</button>
                 <button onclick="cambiarVista('contacto')" class="hover:text-deliush-rose transition focus:outline-none">Contacto</button>
                 <button onclick="cambiarVista('faq')" class="hover:text-deliush-rose transition focus:outline-none">FAQ</button>
             </nav>
@@ -74,7 +77,10 @@
         <!-- Menú Desplegable Móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-deliush-pink px-4 pt-2 pb-4 space-y-2">
             <button onclick="cambiarVista('inicio'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Inicio</button>
-            <button onclick="cambiarVista('indice'); toggleMobileMenu();" class="block w-full text-left text-deliush-accent font-bold transition py-1">Índice General</button>
+            <button onclick="cambiarVista('sobre-mi'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Sobre mí</button>
+            <button onclick="cambiarVista('ideas-modelos'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Ideas y modelos</button>
+            <button onclick="cambiarVista('celebraciones'); toggleMobileMenu();" class="block w-full text-left text-deliush-accent font-bold transition py-1">Celebraciones</button>
+            <button onclick="cambiarVista('galerias'); toggleMobileMenu();" class="block w-full text-left text-deliush-accent font-bold transition py-1">Galerías</button>
             <button onclick="cambiarVista('contacto'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Contacto</button>
             <button onclick="cambiarVista('faq'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">FAQ</button>
         </div>
@@ -82,11 +88,11 @@
 
     <main class="flex-grow">
 
-        <!-- ================= VISTA 1: INICIO (Libre de pestañas de índice) ================= -->
+        <!-- ================= VISTA 1: INICIO ================= -->
         <section id="vista-inicio" class="view-section relative bg-gradient-to-b from-deliush-purple/30 via-deliush-pink/30 to-deliush-cream py-20 lg:py-32">
             <div class="max-w-5xl mx-auto px-4 text-center space-y-8">
                 <span class="inline-block bg-deliush-pink text-deliush-accent font-semibold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full shadow-sm">
-                    Bienvenido a Deliush Bakes
+                    Bienvenidos a Deliush Bakes
                 </span>
                 <h1 class="text-4xl sm:text-6xl font-extrabold text-deliush-brown leading-tight">
                     El arte de endulzar tus momentos más especiales
@@ -95,94 +101,21 @@
                     Repostería fina, pan artesanal y pasteles personalizados diseñados con dedicación, ingredientes de alta calidad y un sabor inolvidable.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-6">
-                    <!-- BOTÓN PRINCIPAL PARA IR AL ÍNDICE -->
-                    <button onclick="cambiarVista('indice')" class="w-full sm:w-auto bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-4 px-10 rounded-full shadow-xl transition transform hover:-scale-105 text-lg flex items-center justify-center space-x-3">
-                        <i class="fas fa-th-list"></i>
-                        <span>Explorar Índice de Contenidos</span>
+                    <button onclick="cambiarVista('celebraciones')" class="w-full sm:w-auto bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-4 px-10 rounded-full shadow-xl transition transform hover:-scale-105 text-lg flex items-center justify-center space-x-3">
+                        <i class="fas fa-gift"></i>
+                        <span>Explorar Celebraciones</span>
                     </button>
-                    <button onclick="cambiarVista('contacto')" class="w-full sm:w-auto bg-white border border-deliush-accent text-deliush-accent hover:bg-deliush-pink/30 font-bold py-4 px-8 rounded-full shadow-md transition text-lg">
-                        Cotizar por WhatsApp
+                    <button onclick="cambiarVista('galerias')" class="w-full sm:w-auto bg-white border border-deliush-accent text-deliush-accent hover:bg-deliush-pink/30 font-bold py-4 px-8 rounded-full shadow-md transition text-lg">
+                        Ver Galerías
                     </button>
                 </div>
             </div>
         </section>
 
 
-        <!-- ================= VISTA 2: PÁSTAÑA / PÁGINA INDEPENDIENTE DE "ÍNDICE" ================= -->
-        <section id="vista-indice" class="view-section hidden py-16 bg-white min-h-[80vh]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Panel de Navegación</span>
-                    <h2 class="text-3xl sm:text-5xl font-bold text-deliush-brown mt-2 mb-4">Índice General</h2>
-                    <p class="text-deliush-brown/80">Selecciona la sección, categoría o galería que deseas explorar:</p>
-                </div>
-
-                <!-- Tarjetas del Índice (Pestañas independientes) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    
-                    <!-- Pestaña: Sobre Mí -->
-                    <div onclick="cambiarVista('sobre-mi')" class="bg-deliush-cream rounded-3xl p-8 shadow-md hover:shadow-xl transition cursor-pointer border border-deliush-pink/60 group text-center flex flex-col items-center">
-                        <div class="w-16 h-16 bg-deliush-pink text-deliush-accent rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-deliush-brown mb-2">Sobre Mí</h3>
-                        <p class="text-deliush-brown/70 text-sm">Conoce la historia, pasión y dedicación detrás de cada creación en Deliush Bakes.</p>
-                        <span class="mt-6 text-deliush-accent font-bold text-sm flex items-center space-x-2"><span>Ver sección</span> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-
-                    <!-- Pestaña NUEVA: Galería -->
-                    <div onclick="cambiarVista('galeria-general')" class="bg-deliush-cream rounded-3xl p-8 shadow-md hover:shadow-xl transition cursor-pointer border border-deliush-pink/60 group text-center flex flex-col items-center">
-                        <div class="w-16 h-16 bg-deliush-pink text-deliush-accent rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-images"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-deliush-brown mb-2">Galería</h3>
-                        <p class="text-deliush-brown/70 text-sm">Fotografías destacadas y trabajos recientes de alta pastelería y repostería fina.</p>
-                        <span class="mt-6 text-deliush-accent font-bold text-sm flex items-center space-x-2"><span>Ver galería</span> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-
-                    <!-- Pestaña RENOMBRADA: Ideas y modelos -->
-                    <div onclick="cambiarVista('ideas-modelos')" class="bg-deliush-cream rounded-3xl p-8 shadow-md hover:shadow-xl transition cursor-pointer border border-deliush-pink/60 group text-center flex flex-col items-center">
-                        <div class="w-16 h-16 bg-deliush-pink text-deliush-accent rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-deliush-brown mb-2">Ideas y modelos</h3>
-                        <p class="text-deliush-brown/70 text-sm">Inspiración detallada por categorías de celebración para tu próximo pedido.</p>
-                        <span class="mt-6 text-deliush-accent font-bold text-sm flex items-center space-x-2"><span>Explorar ideas</span> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-
-                    <!-- Pestaña: Contacto y Captación -->
-                    <div onclick="cambiarVista('contacto')" class="bg-deliush-cream rounded-3xl p-8 shadow-md hover:shadow-xl transition cursor-pointer border border-deliush-pink/60 group text-center flex flex-col items-center">
-                        <div class="w-16 h-16 bg-deliush-pink text-deliush-accent rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-deliush-brown mb-2">Contacto</h3>
-                        <p class="text-deliush-brown/70 text-sm">Formulario de registro y cotización personalizada vía WhatsApp.</p>
-                        <span class="mt-6 text-deliush-accent font-bold text-sm flex items-center space-x-2"><span>Ir a contacto</span> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-
-                    <!-- Pestaña: Preguntas Frecuentes (FAQ) -->
-                    <div onclick="cambiarVista('faq')" class="bg-deliush-cream rounded-3xl p-8 shadow-md hover:shadow-xl transition cursor-pointer border border-deliush-pink/60 group text-center flex flex-col items-center">
-                        <div class="w-16 h-16 bg-deliush-pink text-deliush-accent rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-question-circle"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-deliush-brown mb-2">FAQ</h3>
-                        <p class="text-deliush-brown/70 text-sm">Resolvemos tus dudas sobre anticipación, entregas y personalización.</p>
-                        <span class="mt-6 text-deliush-accent font-bold text-sm flex items-center space-x-2"><span>Ver dudas</span> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ================= VISTA 3: SOBRE MÍ ================= -->
+        <!-- ================= VISTA 2: SOBRE MÍ ================= -->
         <section id="vista-sobre-mi" class="view-section hidden py-16 bg-white min-h-[80vh]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <button onclick="cambiarVista('indice')" class="text-deliush-accent font-semibold flex items-center space-x-2 hover:underline">
-                        <i class="fas fa-arrow-left"></i> <span>Volver al Índice</span>
-                    </button>
-                </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="relative flex justify-center">
                         <div class="absolute -top-4 -left-4 w-72 h-72 bg-deliush-mint rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
@@ -205,19 +138,90 @@
         </section>
 
 
-        <!-- ================= VISTA 4: GALERÍA ================= -->
-        <section id="vista-galeria-general" class="view-section hidden py-16 bg-deliush-cream min-h-[80vh]">
+        <!-- ================= VISTA 3: IDEAS Y MODELOS ================= -->
+        <section id="vista-ideas-modelos" class="view-section hidden py-16 bg-deliush-cream min-h-[80vh]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <button onclick="cambiarVista('indice')" class="text-deliush-accent font-semibold flex items-center space-x-2 hover:underline">
-                        <i class="fas fa-arrow-left"></i> <span>Volver al Índice</span>
-                    </button>
-                </div>
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mb-4">Galería Fotográfica</h2>
-                    <p class="text-deliush-brown/80">Una muestra visual de nuestras creaciones más destacadas en pastelería fina.</p>
+                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/60 px-3 py-1 rounded-full">Inspiración</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mt-2 mb-4">Ideas y modelos</h2>
+                    <p class="text-deliush-brown/80">Selecciona una categoría para inspirarte con nuestros diseños personalizados:</p>
                 </div>
-                <!-- Cuadrícula de Galería -->
+
+                <!-- Botones de Categorías -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                    <button onclick="filtrarIdeas('Cumpleaños')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎂 Cumpleaños</button>
+                    <button onclick="filtrarIdeas('XV Años')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">👑 XV Años</button>
+                    <button onclick="filtrarIdeas('Baby Shower')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🍼 Baby Shower</button>
+                    <button onclick="filtrarIdeas('Halloween')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎃 Halloween</button>
+                    <button onclick="filtrarIdeas('Navidad')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎄 Navidad</button>
+                    <button onclick="filtrarIdeas('Día de las Madres')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💐 Día de las Madres</button>
+                    <button onclick="filtrarIdeas('San Valentín')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💖 San Valentín</button>
+                    <button onclick="filtrarIdeas('Día de Muertos')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💀 Día de Muertos</button>
+                    <button onclick="filtrarIdeas('Día del Padre')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">👔 Día del Padre</button>
+                    <button onclick="filtrarIdeas('Graduación')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎓 Graduación</button>
+                </div>
+
+                <!-- Contenedor dinámico -->
+                <div id="grid-ideas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-3xl p-8 shadow-md text-center col-span-full py-12 border border-deliush-pink">
+                        <i class="fas fa-mouse-pointer text-4xl text-deliush-accent mb-3"></i>
+                        <h3 class="text-xl font-bold text-deliush-brown">Haz clic en una categoría superior</h3>
+                        <p class="text-deliush-brown/70 text-sm">Visualiza los modelos e ideas ideales para cada ocasión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= VISTA 4: CELEBRACIONES ================= -->
+        <section id="vista-celebraciones" class="view-section hidden py-16 bg-white min-h-[80vh]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Eventos Especiales</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-deliush-brown mt-2 mb-4">Celebraciones</h2>
+                    <p class="text-deliush-brown/80">Descubre nuestros pasteles y repostería especializada para cada festividad del año:</p>
+                </div>
+
+                <!-- Tarjetas de Celebraciones Principales -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
+                        <img src="pastel-cumpleanos.jpeg" alt="Cumpleaños" class="h-64 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-deliush-brown">Cumpleaños</h3>
+                            <p class="text-sm text-deliush-brown/70 mt-1">Diseños divertidos y temáticos para todas las edades.</p>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar →</button>
+                        </div>
+                    </div>
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
+                        <img src="pastel-xvanos.jpeg" alt="XV Años" class="h-64 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-deliush-brown">XV Años</h3>
+                            <p class="text-sm text-deliush-brown/70 mt-1">Elegancia y niveles imponentes para tu gran noche.</p>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar →</button>
+                        </div>
+                    </div>
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
+                        <img src="baby-shower.jpeg" alt="Baby Shower" class="h-64 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-deliush-brown">Baby Showers</h3>
+                            <p class="text-sm text-deliush-brown/70 mt-1">Temáticas tiernas y delicadas para dar la bienvenida al bebé.</p>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= VISTA 5: GALERÍAS ================= -->
+        <section id="vista-galerias" class="view-section hidden py-16 bg-deliush-cream min-h-[80vh]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Portafolio Visual</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-deliush-brown mt-2 mb-4">Galerías</h2>
+                    <p class="text-deliush-brown/80">Explora nuestra colección fotográfica de trabajos recientes:</p>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-2xl overflow-hidden shadow-md">
                         <img src="pastel-redvelvet.jpeg" alt="Red Velvet" class="h-64 w-full object-cover">
@@ -236,54 +240,9 @@
         </section>
 
 
-        <!-- ================= VISTA 5: IDEAS Y MODELOS ================= -->
-        <section id="vista-ideas-modelos" class="view-section hidden py-16 bg-deliush-cream min-h-[80vh]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <button onclick="cambiarVista('indice')" class="text-deliush-accent font-semibold flex items-center space-x-2 hover:underline">
-                        <i class="fas fa-arrow-left"></i> <span>Volver al Índice</span>
-                    </button>
-                </div>
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/60 px-3 py-1 rounded-full">Catálogo de Celebraciones</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mt-2 mb-4">Ideas y modelos</h2>
-                    <p class="text-deliush-brown/80">Selecciona una categoría de celebración para inspirarte:</p>
-                </div>
-
-                <!-- Botones de Categorías de Celebraciones -->
-                <div class="flex flex-wrap justify-center gap-3 mb-10">
-                    <button onclick="filtrarIdeas('Cumpleaños')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎂 Cumpleaños</button>
-                    <button onclick="filtrarIdeas('XV Años')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">👑 XV Años</button>
-                    <button onclick="filtrarIdeas('Baby Shower')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🍼 Baby Shower</button>
-                    <button onclick="filtrarIdeas('Halloween')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎃 Halloween</button>
-                    <button onclick="filtrarIdeas('Navidad')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎄 Navidad</button>
-                    <button onclick="filtrarIdeas('Día de las Madres')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💐 Día de las Madres</button>
-                    <button onclick="filtrarIdeas('San Valentín')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💖 San Valentín</button>
-                    <button onclick="filtrarIdeas('Día de Muertos')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💀 Día de Muertos</button>
-                    <button onclick="filtrarIdeas('Día del Padre')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">👔 Día del Padre</button>
-                    <button onclick="filtrarIdeas('Graduación')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎓 Graduación</button>
-                </div>
-
-                <!-- Contenedor dinámico de modelos -->
-                <div id="grid-ideas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-3xl p-8 shadow-md text-center col-span-full py-12 border border-deliush-pink">
-                        <i class="fas fa-mouse-pointer text-4xl text-deliush-accent mb-3"></i>
-                        <h3 class="text-xl font-bold text-deliush-brown">Haz clic en una categoría superior</h3>
-                        <p class="text-deliush-brown/70 text-sm">Visualiza los diseños ideales para cada ocasión especial.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
         <!-- ================= VISTA 6: CONTACTO ================= -->
         <section id="vista-contacto" class="view-section hidden py-16 bg-white min-h-[80vh]">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <button onclick="cambiarVista('indice')" class="text-deliush-accent font-semibold flex items-center space-x-2 hover:underline">
-                        <i class="fas fa-arrow-left"></i> <span>Volver al Índice</span>
-                    </button>
-                </div>
                 <div class="bg-deliush-cream rounded-3xl p-8 sm:p-12 shadow-xl border border-deliush-pink">
                     <div class="text-center mb-8">
                         <h2 class="text-3xl font-bold text-deliush-brown">Solicita tu Presupuesto Personalizado</h2>
@@ -345,11 +304,6 @@
         <!-- ================= VISTA 7: FAQ ================= -->
         <section id="vista-faq" class="view-section hidden py-16 bg-white min-h-[80vh]">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <button onclick="cambiarVista('indice')" class="text-deliush-accent font-semibold flex items-center space-x-2 hover:underline">
-                        <i class="fas fa-arrow-left"></i> <span>Volver al Índice</span>
-                    </button>
-                </div>
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-deliush-brown">Preguntas Frecuentes</h2>
                     <p class="text-deliush-brown/80 mt-2">Todo lo que necesitas saber antes de encargar tu pedido</p>
@@ -394,7 +348,6 @@
 
     <!-- SCRIPTS DE CONTROL DE VISTAS (SPA ROUTER) -->
     <script>
-        // Catálogo para la sección "Ideas y modelos"
         const baseIdeasModelos = {
             'Cumpleaños': [
                 { img: 'pastel-cumpleanos.jpeg', titulo: 'Pastel Estilo Ilustrado', desc: 'Diseños divertidos personalizados con frases y decoraciones a mano.' },
@@ -433,13 +386,10 @@
             ]
         };
 
-        // Función central para alternar vistas (SPA Engine)
         function cambiarVista(nombreVista) {
-            // Ocultar todas las secciones principales
             const secciones = document.querySelectorAll('.view-section');
             secciones.forEach(sec => sec.classList.add('hidden'));
 
-            // Mostrar la vista seleccionada
             const vistaActiva = document.getElementById(`vista-${nombreVista}`);
             if (vistaActiva) {
                 vistaActiva.classList.remove('hidden');
@@ -447,7 +397,6 @@
             }
         }
 
-        // Filtrar dinámicamente en "Ideas y modelos"
         function filtrarIdeas(categoria) {
             const grid = document.getElementById('grid-ideas');
             const items = baseIdeasModelos[categoria] || [];
@@ -478,13 +427,11 @@
             grid.innerHTML = html;
         }
 
-        // Menú móvil
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         function toggleMobileMenu() { mobileMenu.classList.add('hidden'); }
 
-        // Formulario y localStorage
         const leadForm = document.getElementById('lead-form');
         const formSuccess = document.getElementById('form-success');
         leadForm.addEventListener('submit', function(e) {
