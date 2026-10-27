@@ -35,7 +35,7 @@
 </head>
 <body class="bg-deliush-cream text-deliush-brown font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- NAV BAR / ENCABEZADO REESTRUCTURADO -->
+    <!-- NAV BAR / ENCABEZADO -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo oficial -->
@@ -47,15 +47,12 @@
                 </div>
             </button>
             
-            <!-- Menú de Navegación Principal solicitado -->
-            <nav id="desktop-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold text-deliush-brown">
+            <!-- Menú Navegación Principal: Solo "Celebraciones" y "Galerías" -->
+            <nav id="desktop-nav" class="hidden md:flex items-center space-x-8 text-base font-bold text-deliush-brown">
                 <button onclick="cambiarVista('inicio')" class="hover:text-deliush-rose transition focus:outline-none">Inicio</button>
-                <button onclick="cambiarVista('sobre-mi')" class="hover:text-deliush-rose transition focus:outline-none">Sobre mí</button>
-                <button onclick="cambiarVista('ideas-modelos')" class="hover:text-deliush-rose transition focus:outline-none">Ideas y modelos</button>
-                <button onclick="cambiarVista('celebraciones')" class="hover:text-deliush-rose transition focus:outline-none font-bold text-deliush-accent">Celebraciones</button>
-                <button onclick="cambiarVista('galerias')" class="hover:text-deliush-rose transition focus:outline-none font-bold text-deliush-accent">Galerías</button>
-                <button onclick="cambiarVista('contacto')" class="hover:text-deliush-rose transition focus:outline-none">Contacto</button>
-                <button onclick="cambiarVista('faq')" class="hover:text-deliush-rose transition focus:outline-none">FAQ</button>
+                <button onclick="cambiarVista('celebraciones')" class="text-deliush-accent hover:text-deliush-rose transition focus:outline-none">Celebraciones</button>
+                <button onclick="cambiarVista('galerias')" class="text-deliush-accent hover:text-deliush-rose transition focus:outline-none">Galerías</button>
+                <button onclick="cambiarVista('contacto')" class="hover:text-deliush-rose transition focus:outline-none text-sm font-semibold">Contacto</button>
             </nav>
 
             <!-- Iconos Redes Sociales -->
@@ -77,119 +74,180 @@
         <!-- Menú Desplegable Móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-deliush-pink px-4 pt-2 pb-4 space-y-2">
             <button onclick="cambiarVista('inicio'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Inicio</button>
-            <button onclick="cambiarVista('sobre-mi'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Sobre mí</button>
-            <button onclick="cambiarVista('ideas-modelos'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Ideas y modelos</button>
             <button onclick="cambiarVista('celebraciones'); toggleMobileMenu();" class="block w-full text-left text-deliush-accent font-bold transition py-1">Celebraciones</button>
             <button onclick="cambiarVista('galerias'); toggleMobileMenu();" class="block w-full text-left text-deliush-accent font-bold transition py-1">Galerías</button>
             <button onclick="cambiarVista('contacto'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">Contacto</button>
-            <button onclick="cambiarVista('faq'); toggleMobileMenu();" class="block w-full text-left text-deliush-brown hover:text-deliush-accent font-medium transition py-1">FAQ</button>
         </div>
     </header>
 
     <main class="flex-grow">
 
-        <!-- ================= VISTA 1: INICIO ================= -->
-        <section id="vista-inicio" class="view-section relative bg-gradient-to-b from-deliush-purple/30 via-deliush-pink/30 to-deliush-cream py-20 lg:py-32">
-            <div class="max-w-5xl mx-auto px-4 text-center space-y-8">
-                <span class="inline-block bg-deliush-pink text-deliush-accent font-semibold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full shadow-sm">
-                    Bienvenidos a Deliush Bakes
-                </span>
-                <h1 class="text-4xl sm:text-6xl font-extrabold text-deliush-brown leading-tight">
-                    El arte de endulzar tus momentos más especiales
-                </h1>
-                <p class="text-lg text-deliush-brown/80 max-w-2xl mx-auto">
-                    Repostería fina, pan artesanal y pasteles personalizados diseñados con dedicación, ingredientes de alta calidad y un sabor inolvidable.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-6">
-                    <button onclick="cambiarVista('celebraciones')" class="w-full sm:w-auto bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-4 px-10 rounded-full shadow-xl transition transform hover:-scale-105 text-lg flex items-center justify-center space-x-3">
-                        <i class="fas fa-gift"></i>
-                        <span>Explorar Celebraciones</span>
-                    </button>
-                    <button onclick="cambiarVista('galerias')" class="w-full sm:w-auto bg-white border border-deliush-accent text-deliush-accent hover:bg-deliush-pink/30 font-bold py-4 px-8 rounded-full shadow-md transition text-lg">
-                        Ver Galerías
-                    </button>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ================= VISTA 2: SOBRE MÍ ================= -->
-        <section id="vista-sobre-mi" class="view-section hidden py-16 bg-white min-h-[80vh]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="relative flex justify-center">
-                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-deliush-mint rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
-                        <img src="banner-logo.jpeg" alt="Deliush Bakes Repostería Fina" class="relative rounded-3xl shadow-xl w-full max-w-md h-auto object-contain bg-deliush-purple/20 p-2">
-                    </div>
-                    <div class="space-y-6">
-                        <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown">
-                            Detrás de cada detalle hay una historia y mucho amor
-                        </h2>
-                        <div class="w-16 h-1 bg-deliush-accent rounded"></div>
-                        <p class="text-deliush-brown/80 leading-relaxed text-lg">
-                            ¡Hola! Soy la mente y el corazón detrás de <strong>Deliush Bakes</strong>. Mi pasión por la repostería fina y el pan artesanal nació del deseo de convertir momentos especiales en experiencias memorables para el paladar y la vista.
-                        </p>
-                        <p class="text-deliush-brown/80 leading-relaxed">
-                            Diseñamos piezas exclusivas que reflejan la esencia de cada celebración, seleccionando rigurosamente cada ingrediente para garantizar frescura y calidad superior.
-                        </p>
+        <!-- ================= VISTA 1: INICIO (PÁGINA PRINCIPAL) ================= -->
+        <!-- Contiene: Hero, Sobre mí, Ideas y modelos, y FAQ -->
+        <div id="vista-inicio" class="view-section">
+            
+            <!-- 1. HERO -->
+            <section class="relative bg-gradient-to-b from-deliush-purple/30 via-deliush-pink/30 to-deliush-cream py-16 lg:py-24">
+                <div class="max-w-5xl mx-auto px-4 text-center space-y-6">
+                    <span class="inline-block bg-deliush-pink text-deliush-accent font-semibold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full shadow-sm">
+                        Repostería Fina y Pan Artesanal
+                    </span>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold text-deliush-brown leading-tight">
+                        Creaciones dulces hechas con pasión e imaginación
+                    </h1>
+                    <p class="text-lg text-deliush-brown/80 max-w-2xl mx-auto">
+                        En Deliush Bakes convertimos cada celebración en una experiencia inolvidable con sabor artesanal único.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                        <button onclick="cambiarVista('celebraciones')" class="w-full sm:w-auto bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition transform hover:-scale-105">
+                            Explorar Celebraciones
+                        </button>
+                        <button onclick="cambiarVista('galerias')" class="w-full sm:w-auto bg-white border border-deliush-accent text-deliush-accent hover:bg-deliush-pink/30 font-bold py-3.5 px-8 rounded-full shadow-md transition">
+                            Ver Galerías
+                        </button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-
-        <!-- ================= VISTA 3: IDEAS Y MODELOS ================= -->
-        <section id="vista-ideas-modelos" class="view-section hidden py-16 bg-deliush-cream min-h-[80vh]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/60 px-3 py-1 rounded-full">Inspiración</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mt-2 mb-4">Ideas y modelos</h2>
-                    <p class="text-deliush-brown/80">Selecciona una categoría para inspirarte con nuestros diseños personalizados:</p>
-                </div>
-
-                <!-- Botones de Categorías -->
-                <div class="flex flex-wrap justify-center gap-3 mb-10">
-                    <button onclick="filtrarIdeas('Cumpleaños')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎂 Cumpleaños</button>
-                    <button onclick="filtrarIdeas('XV Años')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">👑 XV Años</button>
-                    <button onclick="filtrarIdeas('Baby Shower')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🍼 Baby Shower</button>
-                    <button onclick="filtrarIdeas('Halloween')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎃 Halloween</button>
-                    <button onclick="filtrarIdeas('Navidad')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎄 Navidad</button>
-                    <button onclick="filtrarIdeas('Día de las Madres')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💐 Día de las Madres</button>
-                    <button onclick="filtrarIdeas('San Valentín')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💖 San Valentín</button>
-                    <button onclick="filtrarIdeas('Día de Muertos')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">💀 Día de Muertos</button>
-                    <button onclick="filtrarIdeas('Día del Padre')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">👔 Día del Padre</button>
-                    <button onclick="filtrarIdeas('Graduación')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-5 py-2.5 rounded-full shadow-sm font-semibold transition border border-deliush-pink">🎓 Graduación</button>
-                </div>
-
-                <!-- Contenedor dinámico -->
-                <div id="grid-ideas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-3xl p-8 shadow-md text-center col-span-full py-12 border border-deliush-pink">
-                        <i class="fas fa-mouse-pointer text-4xl text-deliush-accent mb-3"></i>
-                        <h3 class="text-xl font-bold text-deliush-brown">Haz clic en una categoría superior</h3>
-                        <p class="text-deliush-brown/70 text-sm">Visualiza los modelos e ideas ideales para cada ocasión.</p>
+            <!-- 2. SECCIÓN: SOBRE MÍ -->
+            <section id="sobre-mi" class="py-16 bg-white border-t border-deliush-pink/40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="relative flex justify-center">
+                            <div class="absolute -top-4 -left-4 w-72 h-72 bg-deliush-mint rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                            <img src="banner-logo.jpeg" alt="Deliush Bakes Repostería Fina" class="relative rounded-3xl shadow-xl w-full max-w-md h-auto object-contain bg-deliush-purple/20 p-2">
+                        </div>
+                        <div class="space-y-6">
+                            <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/60 px-3 py-1 rounded-full">Nuestra Historia</span>
+                            <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown">
+                                Sobre Mí
+                            </h2>
+                            <div class="w-16 h-1 bg-deliush-accent rounded"></div>
+                            <p class="text-deliush-brown/80 leading-relaxed text-lg">
+                                ¡Hola! Soy la mente y el corazón detrás de <strong>Deliush Bakes</strong>. Mi pasión por la repostería fina y el pan artesanal nació del deseo de convertir momentos especiales en experiencias memorables para el paladar y la vista.
+                            </p>
+                            <p class="text-deliush-brown/80 leading-relaxed">
+                                Diseñamos piezas exclusivas que reflejan la esencia de cada celebración, seleccionando rigurosamente cada ingrediente para garantizar frescura y calidad superior.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- 3. SECCIÓN: IDEAS Y MODELOS -->
+            <section id="ideas-modelos" class="py-16 bg-deliush-cream border-t border-deliush-pink/40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-10">
+                        <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/60 px-3 py-1 rounded-full">Inspiración</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-deliush-brown mt-2 mb-4">Ideas y Modelos</h2>
+                        <p class="text-deliush-brown/80">Selecciona una categoría para ver los estilos y diseños de pasteles disponibles:</p>
+                    </div>
+
+                    <!-- Botones de Categorías de Celebraciones -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-10">
+                        <button onclick="filtrarIdeas('Cumpleaños')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">🎂 Cumpleaños</button>
+                        <button onclick="filtrarIdeas('XV Años')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">👑 XV Años</button>
+                        <button onclick="filtrarIdeas('Baby Shower')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">🍼 Baby Shower</button>
+                        <button onclick="filtrarIdeas('Halloween')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">🎃 Halloween</button>
+                        <button onclick="filtrarIdeas('Navidad')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">🎄 Navidad</button>
+                        <button onclick="filtrarIdeas('Día de las Madres')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">💐 Día Madres</button>
+                        <button onclick="filtrarIdeas('San Valentín')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">💖 San Valentín</button>
+                        <button onclick="filtrarIdeas('Día de Muertos')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">💀 Día Muertos</button>
+                        <button onclick="filtrarIdeas('Día del Padre')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">👔 Día Padre</button>
+                        <button onclick="filtrarIdeas('Graduación')" class="bg-white hover:bg-deliush-pink text-deliush-brown px-4 py-2 rounded-full shadow-sm font-semibold transition border border-deliush-pink text-sm">🎓 Graduación</button>
+                    </div>
+
+                    <!-- Contenedor dinámico de fotos de ideas -->
+                    <div id="grid-ideas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                            <img src="pastel-cumpleanos.jpeg" alt="Pastel Cumpleaños" class="h-64 w-full object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-deliush-accent uppercase">Cumpleaños</span>
+                                <h3 class="font-bold text-lg text-deliush-brown mt-1">Pastel Ilustrado Divertido</h3>
+                                <p class="text-sm text-deliush-brown/70 mt-2">Modelado a mano con mensajes graciosos y personalizados.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                            <img src="pastel-leon.jpeg" alt="Pastel León" class="h-64 w-full object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-deliush-accent uppercase">Infantil / Safari</span>
+                                <h3 class="font-bold text-lg text-deliush-brown mt-1">Pastel León en 3D</h3>
+                                <p class="text-sm text-deliush-brown/70 mt-2">Figura de león comestible con hojas tropicales.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                            <img src="pastel-luis-aguilar.jpeg" alt="Pastel Mariachi" class="h-64 w-full object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-deliush-accent uppercase">Tradición / Homenaje</span>
+                                <h3 class="font-bold text-lg text-deliush-brown mt-1">Pastel Mariachi & Sombrero</h3>
+                                <p class="text-sm text-deliush-brown/70 mt-2">Sombrero de charro hecho de fondant con fotos comestibles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. SECCIÓN: FAQ -->
+            <section id="faq" class="py-16 bg-white border-t border-deliush-pink/40">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-10">
+                        <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/60 px-3 py-1 rounded-full">Resolvemos tus dudas</span>
+                        <h2 class="text-3xl font-bold text-deliush-brown mt-2">Preguntas Frecuentes (FAQ)</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                            <h3 class="text-lg font-bold text-deliush-brown flex items-center">
+                                <i class="fas fa-clock text-deliush-accent mr-3"></i>
+                                ¿Con cuánta anticipación debo hacer mi pedido?
+                            </h3>
+                            <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
+                                Recomendamos agendar tu pedido con <strong>1 a 2 semanas de anticipación</strong>. Para fechas festivas o eventos grandes, sugerimos apartar tu lugar con 3 semanas de margen.
+                            </p>
+                        </div>
+
+                        <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                            <h3 class="text-lg font-bold text-deliush-brown flex items-center">
+                                <i class="fas fa-truck text-deliush-accent mr-3"></i>
+                                ¿Entregan a domicilio?
+                            </h3>
+                            <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
+                                Ofrecemos servicio de entrega a domicilio con un costo adicional dependiendo de la zona de entrega, asegurando que tu pedido llegue en óptimas condiciones.
+                            </p>
+                        </div>
+
+                        <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
+                            <h3 class="text-lg font-bold text-deliush-brown flex items-center">
+                                <i class="fas fa-paint-brush text-deliush-accent mr-3"></i>
+                                ¿Cómo confirmo mi pedido personalizado?
+                            </h3>
+                            <p class="mt-2 text-deliush-brown/80 text-sm leading-relaxed pl-7">
+                                Una vez acordado el diseño, porciones y fecha a través de WhatsApp, solicitamos un anticipo del 50% para reservar tu lugar en agenda.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
 
 
-        <!-- ================= VISTA 4: CELEBRACIONES ================= -->
+        <!-- ================= VISTA 2: CELEBRACIONES ================= -->
         <section id="vista-celebraciones" class="view-section hidden py-16 bg-white min-h-[80vh]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Eventos Especiales</span>
+                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Catálogo de Eventos</span>
                     <h2 class="text-3xl sm:text-5xl font-bold text-deliush-brown mt-2 mb-4">Celebraciones</h2>
-                    <p class="text-deliush-brown/80">Descubre nuestros pasteles y repostería especializada para cada festividad del año:</p>
+                    <p class="text-deliush-brown/80">Pasteles y repostería personalizada elaborados especialmente para cada evento:</p>
                 </div>
 
-                <!-- Tarjetas de Celebraciones Principales -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
                         <img src="pastel-cumpleanos.jpeg" alt="Cumpleaños" class="h-64 w-full object-cover">
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-deliush-brown">Cumpleaños</h3>
                             <p class="text-sm text-deliush-brown/70 mt-1">Diseños divertidos y temáticos para todas las edades.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar →</button>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Cumpleaños →</button>
                         </div>
                     </div>
                     <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
@@ -197,7 +255,7 @@
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-deliush-brown">XV Años</h3>
                             <p class="text-sm text-deliush-brown/70 mt-1">Elegancia y niveles imponentes para tu gran noche.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar →</button>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar XV Años →</button>
                         </div>
                     </div>
                     <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
@@ -205,7 +263,31 @@
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-deliush-brown">Baby Showers</h3>
                             <p class="text-sm text-deliush-brown/70 mt-1">Temáticas tiernas y delicadas para dar la bienvenida al bebé.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar →</button>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Baby Shower →</button>
+                        </div>
+                    </div>
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
+                        <img src="galletas halloween.jpeg" alt="Halloween" class="h-64 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-deliush-brown">Halloween</h3>
+                            <p class="text-sm text-deliush-brown/70 mt-1">Galletas temáticas artísticas y postres terroríficos.</p>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Halloween →</button>
+                        </div>
+                    </div>
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
+                        <img src="pastel-redvelvet.jpeg" alt="Navidad" class="h-64 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-deliush-brown">Navidad</h3>
+                            <p class="text-sm text-deliush-brown/70 mt-1">Postres ideales para cenas decembrinas y posadas.</p>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Navidad →</button>
+                        </div>
+                    </div>
+                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
+                        <img src="pastel-fresas.jpeg" alt="San Valentín" class="h-64 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-deliush-brown">San Valentín</h3>
+                            <p class="text-sm text-deliush-brown/70 mt-1">Detalles románticos con fresas y crema fina.</p>
+                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar San Valentín →</button>
                         </div>
                     </div>
                 </div>
@@ -213,13 +295,13 @@
         </section>
 
 
-        <!-- ================= VISTA 5: GALERÍAS ================= -->
+        <!-- ================= VISTA 3: GALERÍAS ================= -->
         <section id="vista-galerias" class="view-section hidden py-16 bg-deliush-cream min-h-[80vh]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
                     <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Portafolio Visual</span>
                     <h2 class="text-3xl sm:text-5xl font-bold text-deliush-brown mt-2 mb-4">Galerías</h2>
-                    <p class="text-deliush-brown/80">Explora nuestra colección fotográfica de trabajos recientes:</p>
+                    <p class="text-deliush-brown/80">Colección de fotografías destacadas de nuestros trabajos en repostería fina:</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -229,18 +311,30 @@
                     </div>
                     <div class="bg-white rounded-2xl overflow-hidden shadow-md">
                         <img src="pastel-chanel.jpeg" alt="Chanel" class="h-64 w-full object-cover">
-                        <div class="p-6"><h3 class="font-bold text-lg text-deliush-brown">Pastel Temático Lujo</h3></div>
+                        <div class="p-6"><h3 class="font-bold text-lg text-deliush-brown">Pastel Temático Lujo Chanel</h3></div>
                     </div>
                     <div class="bg-white rounded-2xl overflow-hidden shadow-md">
                         <img src="pastel-rosa.jpeg" alt="Rosas" class="h-64 w-full object-cover">
                         <div class="p-6"><h3 class="font-bold text-lg text-deliush-brown">Pastel Floral Elegante</h3></div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img src="reposteria1.jpeg" alt="Tartaletas" class="h-64 w-full object-cover">
+                        <div class="p-6"><h3 class="font-bold text-lg text-deliush-brown">Tartaletas de Limón y Queso</h3></div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img src="pastel-fresa2.jpeg" alt="Fresa" class="h-64 w-full object-cover">
+                        <div class="p-6"><h3 class="font-bold text-lg text-deliush-brown">Cheesecake de Frutos Rojos</h3></div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img src="pastel-winnie.jpeg" alt="Winnie Pooh" class="h-64 w-full object-cover">
+                        <div class="p-6"><h3 class="font-bold text-lg text-deliush-brown">Pastel Bosque Winnie Pooh</h3></div>
                     </div>
                 </div>
             </div>
         </section>
 
 
-        <!-- ================= VISTA 6: CONTACTO ================= -->
+        <!-- ================= VISTA 4: CONTACTO ================= -->
         <section id="vista-contacto" class="view-section hidden py-16 bg-white min-h-[80vh]">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-deliush-cream rounded-3xl p-8 sm:p-12 shadow-xl border border-deliush-pink">
@@ -300,28 +394,6 @@
             </div>
         </section>
 
-
-        <!-- ================= VISTA 7: FAQ ================= -->
-        <section id="vista-faq" class="view-section hidden py-16 bg-white min-h-[80vh]">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-deliush-brown">Preguntas Frecuentes</h2>
-                    <p class="text-deliush-brown/80 mt-2">Todo lo que necesitas saber antes de encargar tu pedido</p>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
-                        <h3 class="text-lg font-bold text-deliush-brown">¿Con cuánta anticipación debo hacer mi pedido?</h3>
-                        <p class="mt-2 text-deliush-brown/80 text-sm">Recomendamos agendar con 1 a 2 semanas de anticipación (3 semanas para bodas o eventos grandes).</p>
-                    </div>
-                    <div class="bg-deliush-cream rounded-2xl p-6 shadow-sm border border-deliush-pink/50">
-                        <h3 class="text-lg font-bold text-deliush-brown">¿Entregan a domicilio?</h3>
-                        <p class="mt-2 text-deliush-brown/80 text-sm">Sí, contamos con servicio de entrega con costo adicional según la ubicación.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -346,7 +418,7 @@
         </button>
     </div>
 
-    <!-- SCRIPTS DE CONTROL DE VISTAS (SPA ROUTER) -->
+    <!-- SCRIPTS EN JAVASCRIPT -->
     <script>
         const baseIdeasModelos = {
             'Cumpleaños': [
@@ -363,8 +435,7 @@
                 { img: 'pastel-osito.jpeg', titulo: 'Pastel Osito con Globos', desc: 'Osito de celebración con detalles dorados.' }
             ],
             'Halloween': [
-                { img: 'galletas halloween.jpeg', titulo: 'Galletas Artísticas', desc: 'Caritas pintadas a mano con glacé real.' },
-                { img: 'pastel-redvelvet.jpeg', titulo: 'Pastel Temático', desc: 'Capas ricas con estilo de temporada.' }
+                { img: 'galletas halloween.jpeg', titulo: 'Galletas Artísticas', desc: 'Caritas pintadas a mano con glacé real.' }
             ],
             'Navidad': [
                 { img: 'pastel-redvelvet.jpeg', titulo: 'Pastel Navideño de Frutos Rojos', desc: 'Ideal para cenas decembrinas.' }
@@ -386,6 +457,7 @@
             ]
         };
 
+        // Función para cambiar entre las Vistas
         function cambiarVista(nombreVista) {
             const secciones = document.querySelectorAll('.view-section');
             secciones.forEach(sec => sec.classList.add('hidden'));
@@ -397,6 +469,7 @@
             }
         }
 
+        // Función para filtrar ideas dentro de la página de inicio
         function filtrarIdeas(categoria) {
             const grid = document.getElementById('grid-ideas');
             const items = baseIdeasModelos[categoria] || [];
