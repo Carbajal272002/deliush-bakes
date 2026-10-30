@@ -278,65 +278,49 @@
         </div>
 
 
-        <!-- ================= VISTA 2: CELEBRACIONES ================= -->
+     <!-- ================= VISTA 2: CELEBRACIONES (ESTILO LONY KUCHEN) ================= -->
         <section id="vista-celebraciones" class="view-section hidden py-16 bg-white min-h-[80vh]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Catálogo de Eventos</span>
-                    <h2 class="text-3xl sm:text-5xl font-bold text-deliush-brown mt-2 mb-4">Celebraciones</h2>
-                    <p class="text-deliush-brown/80">Pasteles y repostería personalizada elaborados especialmente para cada evento:</p>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Encabezado de la Sección -->
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Momentos Especiales</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-deliush-brown mt-2 mb-4">Nuestras Celebraciones</h2>
+                    <p class="text-deliush-brown/80 text-base sm:text-lg">Selecciona tu tipo de evento en la barra desplegable para descubrir nuestros diseños y opciones temáticas exclusivas:</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
-                        <img src="pastel-cumpleanos.jpeg" alt="Cumpleaños" class="h-64 w-full object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl text-deliush-brown">Cumpleaños</h3>
-                            <p class="text-sm text-deliush-brown/70 mt-1">Diseños divertidos y temáticos para todas las edades.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Cumpleaños →</button>
-                        </div>
-                    </div>
-                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
-                        <img src="pastel-rey.jpeg" alt="Primer Año Rey" class="h-64 w-full object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl text-deliush-brown">Primer Año / Rey</h3>
-                            <p class="text-sm text-deliush-brown/70 mt-1">Niveles con corona dorada, azul real y acabados finos.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Primer Año →</button>
-                        </div>
-                    </div>
-                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
-                        <img src="pastel-xvanos.jpeg" alt="XV Años" class="h-64 w-full object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl text-deliush-brown">XV Años</h3>
-                            <p class="text-sm text-deliush-brown/70 mt-1">Elegancia y niveles imponentes para tu gran noche.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar XV Años →</button>
-                        </div>
-                    </div>
-                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
-                        <img src="baby-shower.jpeg" alt="Baby Shower" class="h-64 w-full object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl text-deliush-brown">Baby Showers</h3>
-                            <p class="text-sm text-deliush-brown/70 mt-1">Temáticas tiernas y delicadas para dar la bienvenida al bebé.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Baby Shower →</button>
-                        </div>
-                    </div>
-                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
-                        <img src="galletas halloween.jpeg" alt="Halloween" class="h-64 w-full object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl text-deliush-brown">Halloween</h3>
-                            <p class="text-sm text-deliush-brown/70 mt-1">Galletas temáticas artísticas y postres terroríficos.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Halloween →</button>
-                        </div>
-                    </div>
-                    <div class="bg-deliush-cream rounded-2xl overflow-hidden shadow-md">
-                        <img src="pastel-gimnasio.jpeg" alt="Fitness" class="h-64 w-full object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl text-deliush-brown">Fitness & Gimnasio</h3>
-                            <p class="text-sm text-deliush-brown/70 mt-1">Mancuernas, pesas y elementos deportivos personalizados.</p>
-                            <button onclick="cambiarVista('contacto')" class="mt-4 text-deliush-accent font-semibold text-sm hover:underline">Cotizar Gym →</button>
+                <!-- BARRA DESPLEGABLE / SELECTOR ESTILO LONY KUCHEN -->
+                <div class="max-w-xl mx-auto mb-12">
+                    <div class="relative">
+                        <select id="selector-celebracion" onchange="mostrarCelebracion(this.value)" class="w-full bg-deliush-cream border-2 border-deliush-accent/40 text-deliush-brown font-semibold text-lg py-4 px-6 rounded-2xl shadow-md focus:outline-none focus:ring-2 focus:ring-deliush-accent cursor-pointer transition">
+                            <option value="" disabled selected>✨ Elige una celebración...</option>
+                            <option value="cumpleanos">Cumpleaños</option>
+                            <option value="san-valentin">San Valentín</option>
+                            <option value="halloween">Halloween</option>
+                            <option value="navidad">Navidad</option>
+                            <option value="baby-showers">Baby Showers</option>
+                            <option value="revelacion">Revelación de género</option>
+                            <option value="bodas">Bodas</option>
+                            <option value="xv-anos">XV años</option>
+                            <option value="dia-madres">Día de las madres</option>
+                            <option value="aniversarios">Aniversarios</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-deliush-accent">
+                            <i class="fas fa-chevron-down"></i>
                         </div>
                     </div>
                 </div>
+
+                <!-- CONTENEDOR DINÁMICO DE LA CELEBRACIÓN SELECCIONADA -->
+                <div id="info-celebracion" class="transition-all duration-500">
+                    <!-- Estado Inicial / Placeholder -->
+                    <div class="bg-deliush-cream rounded-3xl p-10 sm:p-16 text-center border-2 border-dashed border-deliush-accent/30 max-w-2xl mx-auto shadow-inner">
+                        <i class="fas fa-gift text-5xl text-deliush-accent mb-4 animate-bounce"></i>
+                        <h3 class="text-2xl font-bold text-deliush-brown mb-2">Comienza tu experiencia</h3>
+                        <p class="text-deliush-brown/70">Usa el menú desplegable superior para ver los pasteles y repostería fina diseñados para tu evento.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
