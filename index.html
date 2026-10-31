@@ -278,18 +278,17 @@
         </div>
 
 
-     <!-- ================= VISTA 2: CELEBRACIONES (ESTILO LONY KUCHEN) ================= -->
+    <!-- ================= VISTA 2: CELEBRACIONES (DINÁMICA) ================= -->
         <section id="vista-celebraciones" class="view-section hidden py-16 bg-white min-h-[80vh]">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <!-- Encabezado de la Sección -->
                 <div class="text-center max-w-3xl mx-auto mb-10">
                     <span class="text-xs font-bold text-deliush-accent uppercase tracking-widest bg-deliush-pink/50 px-3 py-1 rounded-full">Momentos Especiales</span>
                     <h2 class="text-3xl sm:text-5xl font-extrabold text-deliush-brown mt-2 mb-4">Nuestras Celebraciones</h2>
                     <p class="text-deliush-brown/80 text-base sm:text-lg">Selecciona tu tipo de evento en la barra desplegable para descubrir nuestros diseños y opciones temáticas exclusivas:</p>
                 </div>
 
-                <!-- BARRA DESPLEGABLE / SELECTOR ESTILO LONY KUCHEN -->
+                <!-- SELECTOR -->
                 <div class="max-w-xl mx-auto mb-12">
                     <div class="relative">
                         <select id="selector-celebracion" onchange="mostrarCelebracion(this.value)" class="w-full bg-deliush-cream border-2 border-deliush-accent/40 text-deliush-brown font-semibold text-lg py-4 px-6 rounded-2xl shadow-md focus:outline-none focus:ring-2 focus:ring-deliush-accent cursor-pointer transition">
@@ -311,9 +310,8 @@
                     </div>
                 </div>
 
-                <!-- CONTENEDOR DINÁMICO DE LA CELEBRACIÓN SELECCIONADA -->
+                <!-- CONTENEDOR DINÁMICO -->
                 <div id="info-celebracion" class="transition-all duration-500">
-                    <!-- Estado Inicial / Placeholder -->
                     <div class="bg-deliush-cream rounded-3xl p-10 sm:p-16 text-center border-2 border-dashed border-deliush-accent/30 max-w-2xl mx-auto shadow-inner">
                         <i class="fas fa-gift text-5xl text-deliush-accent mb-4 animate-bounce"></i>
                         <h3 class="text-2xl font-bold text-deliush-brown mb-2">Comienza tu experiencia</h3>
@@ -437,7 +435,7 @@
         </section>
 
 
-        <!-- ================= VISTA 4: CONTACTO ================= -->
+       <!-- ================= VISTA 4: CONTACTO ================= -->
         <section id="vista-contacto" class="view-section hidden py-16 bg-white min-h-[80vh]">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-deliush-cream rounded-3xl p-8 sm:p-12 shadow-xl border border-deliush-pink">
@@ -471,12 +469,15 @@
                                 <label for="evento" class="block text-sm font-semibold text-deliush-brown mb-2">Tipo de evento</label>
                                 <select id="evento" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-deliush-accent outline-none bg-white">
                                     <option value="Cumpleaños">Cumpleaños</option>
-                                    <option value="XV Años">XV Años</option>
-                                    <option value="Baby Shower">Baby Shower</option>
+                                    <option value="San Valentín">San Valentín</option>
                                     <option value="Halloween">Halloween</option>
                                     <option value="Navidad">Navidad</option>
-                                    <option value="San Valentín">San Valentín</option>
-                                    <option value="Deportes & Gym">Deportes & Gym</option>
+                                    <option value="Baby Showers">Baby Showers</option>
+                                    <option value="Revelación de género">Revelación de género</option>
+                                    <option value="Bodas">Bodas</option>
+                                    <option value="XV años">XV años</option>
+                                    <option value="Día de las madres">Día de las madres</option>
+                                    <option value="Aniversarios">Aniversarios</option>
                                 </select>
                             </div>
                         </div>
@@ -520,6 +521,92 @@
 
     <!-- SCRIPTS EN JAVASCRIPT -->
     <script>
+        const datosCelebraciones = {
+            'cumpleanos': {
+                titulo: 'Cumpleaños Inolvidables',
+                desc: 'Celebra un año más de vida con nuestros pasteles temáticos personalizados, diseños ilustrados y sabores artesanales que encantarán a todos tus invitados.',
+                imagenes: ['pastel-cumpleanos.jpeg', 'pastel-superheroes.jpeg', 'pastel-rosa.jpeg', 'pastel-redvelvet.jpeg', 'pastel-gimnasio.jpg']
+            },
+            'san-valentin': {
+                titulo: 'San Valentín & Romance',
+                desc: 'Demuestra todo tu cariño con detalles dulces, pasteles en forma de corazón y galletas decoradas a mano con temática romántica.',
+                imagenes: ['galletas-san-valentin.jpg', 'pastel-fresas3.jpeg', 'pastel-floral-verde.jpg', 'pastel-fresas.jpeg', 'pastel-chanel.jpeg', 'pastel-fresa2.jpeg', 'galletas-osito.jpg']
+            },
+            'halloween': {
+                titulo: 'Halloween Temático',
+                desc: 'Postres divertidos y terroríficamente deliciosos, galletas artísticas pintadas a mano y pasteles perfectos para tu fiesta de disfraces.',
+                imagenes: ['galletas halloween.jpeg', 'pan-de-muerto.jpg', 'pastel-luis-aguilar.jpeg', 'pastel-rosa.jpeg']
+            },
+            'navidad': {
+                titulo: 'Navidad & Fiestas Decembrinas',
+                desc: 'Disfruta de la magia navideña con nuestro pan artesanal de temporada, galletas de jengibre y pasteles festivos llenos de sabor.',
+                imagenes: ['galleta-arbol-navidad.jpg', 'galleta-snowman.jpg', 'galletas-gengibre.jpg', 'pan-navidad.jpg', 'pastel-llama.jpg']
+            },
+            'baby-showers': {
+                titulo: 'Baby Showers Tiernos',
+                desc: 'Celebra la dulce espera con pasteles decorados con zapatitos de fondant, ositos y colores pastel delicados para dar la bienvenida al nuevo integrante.',
+                imagenes: ['baby-shower.jpeg', 'pastel-winnie.jpeg', 'pastel-rosa.jpeg', 'pastel-leon.jpeg']
+            },
+            'revelacion': {
+                titulo: 'Revelación de Género (Gender Reveal)',
+                desc: 'Sorprende a tu familia con un pastel único cuyo interior revela el gran secreto en tonos rosas o azules al primer corte.',
+                imagenes: ['baby-shower.jpeg', 'pastel-osito.jpeg', 'pastel-toystory.jpeg', 'pastel-elsa.jpeg']
+            },
+            'bodas': {
+                titulo: 'Bodas de Ensueño',
+                desc: 'Pasteles elegantes de varios niveles con acabados botánicos y florales en relieve, diseñados exclusivamente para el día más importante de tu vida.',
+                imagenes: ['pastel-bodas1.jpg', 'pastel-boda2.jpg', 'pastel-boda3.jpg']
+            },
+            'xv-anos': {
+                titulo: 'XV Años Sofisticados',
+                desc: 'Imponentes niveles de repostería fina con detalles en tonos dorados, perlas y coronas para una noche verdaderamente inolvidable.',
+                imagenes: ['pastel-vxanos.jpeg', 'pastel-chanel.jpeg', 'pastel-moderno.jpg']
+            },
+            'dia-madres': {
+                titulo: 'Día de las Madres',
+                desc: 'Consiente a mamá con arreglos florales comestibles, postres delicados y pasteles finamente decorados con todo nuestro amor.',
+                imagenes: ['pastel-fresas3.jpeg', 'reposteria1.jpeg', 'pastel-espacio.jpg']
+            },
+            'aniversarios': {
+                titulo: 'Aniversarios Memorables',
+                desc: 'Conmemora los años de amor y complicidad con una pieza de repostería exclusiva y sabores que perduran en la memoria.',
+                imagenes: ['pastel-aniversario1.jpg', 'pastel-aniversario2.jpg', 'pastel-aniversario3.jpg']
+            }
+        };
+
+        function mostrarCelebracion(clave) {
+            const info = datosCelebraciones[clave];
+            const contenedor = document.getElementById('info-celebracion');
+            if(!info) return;
+
+            let imgsHtml = '';
+            info.imagenes.forEach(img => {
+                imgsHtml += `
+                    <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 duration-350">
+                        <img src="${img}" alt="${info.titulo}" class="h-64 w-full object-cover">
+                    </div>
+                `;
+            });
+
+            contenedor.innerHTML = `
+                <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-deliush-pink/60 animate-fadeIn space-y-8">
+                    <div class="text-center max-w-2xl mx-auto space-y-3">
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-deliush-brown">${info.titulo}</h3>
+                        <p class="text-deliush-brown/80 text-base sm:text-lg leading-relaxed">${info.desc}</p>
+                        <div class="pt-2">
+                            <button onclick="cambiarVista('contacto')" class="bg-deliush-accent hover:bg-deliush-rose text-white font-bold py-3 px-8 rounded-full shadow-md transition">
+                                Cotizar esta Celebración →
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-4">
+                        ${imgsHtml}
+                    </div>
+                </div>
+            `;
+        }
+
         function cambiarVista(nombreVista) {
             const secciones = document.querySelectorAll('.view-section');
             secciones.forEach(sec => sec.classList.add('hidden'));
